@@ -10,11 +10,23 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet var ImageView: UIImageView!
+    
+    var count = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
     }
 
-
+    @IBAction func changeImage(_ sender: Any) {
+        count = count + 1
+        
+        if count >= 10 {
+            ImageView.image = UIImage(named:"background")
+        }
+        
+    }
+    
 }
 
